@@ -13,6 +13,7 @@
                 <div class="dropdown-menu" aria-labelledby="menu-relatorios">
                     <a class="dropdown-item" href="index.php?page=relVeiculo">Veículos</a>
                     <a class="dropdown-item" href="index.php?page=relFuncionario">Funcionário</a>
+                    <a class="dropdown-item" href="index.php?page=relVeiculoAcimaDaVel">Veículos acima da velocidade</a>
                 </div>
             </li>
         </ul>
