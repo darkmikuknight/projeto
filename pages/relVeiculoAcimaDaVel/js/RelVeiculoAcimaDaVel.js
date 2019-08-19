@@ -30,7 +30,7 @@ Cmp.RelVeiculoAcimaDaVel = function() {
                         field: 'placa',
                         width: 100
                     }, {
-                        text: 'Funcionario',
+                        text: 'Funcionário',
                         field: 'nome'
                     }, {
                         text: 'Data',
@@ -56,23 +56,6 @@ Cmp.RelVeiculoAcimaDaVel = function() {
                     },                    
                 ]
             });
-
-            // exibe todos os resultados da busca assim que carrega a pagina sem ter que clicar em buscar //
-            Cmp.showLoading();
-    
-            Cmp.request({
-                url: 'index.php?mdl=relVeiculoAcimaDaVel&file=ds_veiculoAcima.php',
-                
-                success: function(res) {
-                    Cmp.hideLoading();
-                    if(res.status == 'success') {
-                        Cmp.get('gridDadosVeiculosAcima').loadData(res.data);
-                    } else {
-                        Cmp.showErrorMessage(res.message || 'Ocorreu um erro na requisição' + res.status);
-                    }
-                }
-            });
-            //  --------   //
 
         },
 

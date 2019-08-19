@@ -1,7 +1,6 @@
 <div class="row">
     <div class="col-12">
         <div class="jumbotron">
-            <div id="titulo"> Relatório de veículos com velocidade acima da permitida</div>
             <div id="divInputPlaca"></div>
             <div id="divBtnConsultar"></div>
         </div>
@@ -23,12 +22,6 @@
     #divBtnConsultar {
         margin-top: 32px;
         margin-left: 10px;
-    }
-
-    #titulo{
-        font-size: larger;
-        font-weight: bold;
-        text-align: center;
     }
 
     #divCmpGridVeiculoAcima {
