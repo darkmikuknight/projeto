@@ -4,6 +4,7 @@ Cmp.RelVeiculoAcimaDaVel = function() {
 
         render: function() {
 
+
             Cmp.createInput({
                 id: 'inputPlaca',
                 renderTo: '#divInputPlaca',
@@ -27,43 +28,57 @@ Cmp.RelVeiculoAcimaDaVel = function() {
                     {
                         text: 'Placa',
                         field: 'placa',
-                        width: 150
+                        width: 100
                     }, {
                         text: 'Funcionario',
                         field: 'nome'
                     }, {
                         text: 'Data',
-                        field: 'data',
+                        field: 'data_ocorrencia'
                     }, {
                         text: 'Vel. Max.',
                         field: 'vel_maxima',
-                        width: 150
+                        width: 100
                     }, {
                         text: 'Vel. Reg.',
                         field: 'vel_reg',
-                        width: 150
+                        width: 100
                     }, {
                         text: 'Diff. Vel.',
-                        field: 'diferena_vel',
-                        width: 150
-                    }, {
-                        text: 'Vel. Max.',
-                        field: 'vel_maxima',
-                        width: 150
+                        field: 'diferenca_vel',
+                        width: 100
                     }, {
                         text: 'Latitude',
-                        field: 'latitude',
+                        field: 'latitude'
                     }, {
                         text: 'Longitude',
-                        field: 'longitude',
+                        field: 'longitude'
                     },                    
                 ]
             });
+
+            // exibe todos os resultados da busca assim que carrega a pagina sem ter que clicar em buscar //
+            Cmp.showLoading();
+    
+            Cmp.request({
+                url: 'index.php?mdl=relVeiculoAcimaDaVel&file=ds_veiculoAcima.php',
+                
+                success: function(res) {
+                    Cmp.hideLoading();
+                    if(res.status == 'success') {
+                        Cmp.get('gridDadosVeiculosAcima').loadData(res.data);
+                    } else {
+                        Cmp.showErrorMessage(res.message || 'Ocorreu um erro na requisição' + res.status);
+                    }
+                }
+            });
+            //  --------   //
+
         },
 
         buscar: function() {
             Cmp.showLoading();
-
+            
             Cmp.request({
                 url: 'index.php?mdl=relVeiculoAcimaDaVel&file=ds_veiculoAcima.php',
                 params: {

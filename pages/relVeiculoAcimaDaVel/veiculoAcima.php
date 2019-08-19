@@ -1,11 +1,12 @@
 <div class="row">
     <div class="col-12">
         <div class="jumbotron">
+            <div id="titulo"> Relatório de veículos com velocidade acima da permitida</div>
             <div id="divInputPlaca"></div>
             <div id="divBtnConsultar"></div>
         </div>
 
-        <div id="divCmpGridVeiculo"></div>
+        <div id="divCmpGridVeiculoAcima"></div>
     </div>
 </div>
 
@@ -24,7 +25,13 @@
         margin-left: 10px;
     }
 
-    #divCmpGridVeiculo {
+    #titulo{
+        font-size: larger;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #divCmpGridVeiculoAcima {
         display: inline-block;
         width: 100%;
         margin-bottom: 20px;
@@ -33,6 +40,6 @@
 
 <script type="text/javascript">
     Cmp.ready(function() {
-        new Cmp.RelVeiculo().init();
+        new Cmp.RelVeiculoAcimaDaVel().init();
     });
 </script>

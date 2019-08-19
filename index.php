@@ -24,6 +24,11 @@
                     require('pages/relFuncionario/funcionario.php');
                     JSRequire('relFuncionario', 'RelFuncionario.js');
                     break;
+
+                case 'relVeiculoAcimaDaVel':
+                require('pages/relVeiculoAcimaDaVel/veiculoAcima.php');
+                JSRequire('relVeiculoAcimaDaVel', 'RelVeiculoAcimaDaVel.js');
+                break;
     
             }
     
