@@ -10,12 +10,12 @@ Para executar o projeto localmente você deve possuir:
 
 ## Acesso ao banco de dados
 
-O acesso ao banco de dados pode ser feito a partir da url [http://18.220.186.241/](http://18.220.186.241/)
+O acesso ao banco de dados pode ser feito a partir da url xxxxxxxxxxxxx
 
 ### Dados de acesso
 ```
-Login: avaliacao
-Senha: d+/dSr7EwV6u<Zz[
+Login: xxxxxxxxx
+Senha: xxxxxxxx
 ```
 
 ## Objetivo do candidato
